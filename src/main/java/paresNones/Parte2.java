@@ -11,9 +11,10 @@ import java.util.Scanner;
 /**
  *
  * @author hinda
+ * https://github.com/hind214875/ParesNonesHind.git
  */
 public class Parte2 {
-
+     
     public static void main(String[] args) {
         //declarare y initializar variables
         Scanner sc = new Scanner(System.in);
