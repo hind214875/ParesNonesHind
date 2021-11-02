@@ -38,12 +38,18 @@ public class Parte1 {
                     System.out.println("1.Pares");
                     System.out.println("2.Nones");
                     opcion = sc.nextInt();
-         
-                    switch(opcion){
-                        
+
+                    switch (opcion) {
+                        case 1:
+                            break;
+
+                        case 2:
+                            break;
+                            
+                        default:
+                            System.out.println("Elige opcion valida");
                     }
-                    
-                    
+
                     break;
                 case 2:
                     System.out.println("Finalizar El Programa");
