@@ -5,6 +5,7 @@
  */
 package paresNones;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -12,11 +13,13 @@ import java.util.Scanner;
  * @author hinda
  */
 public class Parte2 {
+
     public static void main(String[] args) {
         //declarare y initializar variables
         Scanner sc = new Scanner(System.in);
         int opcion, jugadorA, jugadorB, suma;
         boolean esPare = false;
+        Random numeroAleatorio = new Random();//genera numero aleatorio entre 0.0 y 0.99999 el 1 no sale
         //pedir informaciones
         do {// un boucle que se repite hasta que el usuario elige Salir
 
@@ -57,10 +60,9 @@ public class Parte2 {
                         jugadorA = sc.nextInt();
                     } while (jugadorA < 0 || jugadorA > 10);
 
-                    do {//bucle que se repita si el numero de jugadorB menos que 0 o mas que 10
-                        System.out.println("JugadorB.elige un numero: ");
-                        jugadorB = sc.nextInt();
-                    } while (jugadorB < 0 || jugadorB > 10);
+                    // genera numero aleatorio entre 0 y 10 con Classe Random con 10 incluidos 
+                    System.out.println("JugadorB.elige un numero: ");
+                    jugadorB = numeroAleatorio.nextInt(11); 
 
                     suma = jugadorA + jugadorB;
                     if (suma % 2 == 0) {//si suma is pares
