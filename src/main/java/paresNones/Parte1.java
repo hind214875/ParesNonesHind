@@ -59,16 +59,17 @@ public class Parte1 {
                         }
 
                         do {//bucle Que se Repita si el numero de jugadorA menos que 0 o mas que 10
-                            System.out.println("JugadorA.elige un numero: ");
+                            System.out.println("JugadorA:Introduce un numero: ");
                             jugadorA = sc.nextInt();
                         } while (jugadorA < 0 || jugadorA > 10);
 
                         do {//bucle que se repita si el numero de jugadorB menos que 0 o mas que 10
-                            System.out.println("JugadorB.elige un numero: ");
+                            System.out.println("JugadorB.Introduce un numero: ");
                             jugadorB = sc.nextInt();
                         } while (jugadorB < 0 || jugadorB > 10);
 
                         suma = jugadorA + jugadorB;
+                        System.out.println("la suma es :" +suma);
                         if (suma % 2 == 0) {//si suma is pares
                             if (esPare == true) {//y esPare es true entonces jugador A gana
                                 System.out.println("el jugador A que gana");
