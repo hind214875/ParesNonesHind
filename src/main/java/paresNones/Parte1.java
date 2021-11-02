@@ -34,50 +34,57 @@ public class Parte1 {
                     /*------------------- Jugar --------------------*/
 
  /*---------otro menu para que un jugador elege que quiere Pares o Nones---------*/
-                    System.out.println("elige que quieres Pares o Nones : ");
-                    System.out.println("-------------------------");
-                    System.out.println("1.Pares");
-                    System.out.println("2.Nones");
-                    opcion = sc.nextInt();
+                    do {
+                        System.out.println("elige que quieres Pares o Nones : ");
+                        System.out.println("-------------------------");
+                        System.out.println("1.Pares");
+                        System.out.println("2.Nones");
+                        System.out.println("3.Parar");
+                        opcion = sc.nextInt();
 
-                    switch (opcion) {
-                        case 1:
-                            esPare = true;
-                            break;
+                        switch (opcion) {
+                            case 1:
+                                esPare = true;
+                                break;
 
-                        case 2:
-                            esPare = false;
-                            break;
-
-                        default:
-                            System.out.println("elige opcion valida");
-                    }
-
-                    do {//bucle Que se Repita si el numero de jugadorA menos que 0 o mas que 5
-                        System.out.println("JugadorA.elige un numero: ");
-                        jugadorA = sc.nextInt();
-                    } while (jugadorA < 0 || jugadorA > 5);
-
-                    do {//bucle que se repita si el numero de jugadorB menos que 0 o mas que 5
-                        System.out.println("JugadorB.elige un numero: ");
-                        jugadorB = sc.nextInt();
-                    } while (jugadorB < 0 || jugadorB > 5);
-
-                    suma = jugadorA + jugadorB;
-                    if (suma % 2 == 0) {//si suma is pares
-                        if (esPare == true) {//
-                            System.out.println("el jugador A que gana");
+                            case 2:
+                                esPare = false;
+                                break;
+                            case 3:
+                                System.out.println("Termina");
+                                System.exit(0);
+                                break;
+                            default:
+                                System.out.println("elige opcion valida");
                         }
-                    } else {
-                        //la suma impares
-                        if (esPare == false) {//
-                            System.out.println("el jugador A que gana");
+
+                        do {//bucle Que se Repita si el numero de jugadorA menos que 0 o mas que 10
+                            System.out.println("JugadorA.elige un numero: ");
+                            jugadorA = sc.nextInt();
+                        } while (jugadorA < 0 || jugadorA > 10);
+
+                        do {//bucle que se repita si el numero de jugadorB menos que 0 o mas que 10
+                            System.out.println("JugadorB.elige un numero: ");
+                            jugadorB = sc.nextInt();
+                        } while (jugadorB < 0 || jugadorB > 10);
+
+                        suma = jugadorA + jugadorB;
+                        if (suma % 2 == 0) {//si suma is pares
+                            if (esPare == true) {//y esPare es true entonces jugador A gana
+                                System.out.println("el jugador A que gana");
+                            }
                         } else {
-                            System.out.println("el jugador B que gana");
-                        }
+                            //la suma impares
+                            if (esPare == false) {//si esPare es false B pierde entonces A gana
+                                System.out.println("el jugador A que gana");
+                            } else {//si no B que gana
+                                System.out.println("el jugador B que gana");
+                            }
 
-                    }
+                        }
+                    } while (opcion == 1 || opcion == 2);//repite el bucle cuando opcion==1 or ==2
                     break;
+
                 case 2:
                     System.out.println("Finalizar El Programa");
                     break;
