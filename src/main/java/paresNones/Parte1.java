@@ -16,8 +16,8 @@ public class Parte1 {
     public static void main(String[] args) {
         //declarare y initializar variables
         Scanner sc = new Scanner(System.in);
-        int opcion, jugadorA, jugadorB;
-        boolean esPare;
+        int opcion, jugadorA, jugadorB, suma;
+        boolean esPare = false;
         //pedir informaciones
         do {// un boucle que se repite hasta que el usuario elige Salir
 
@@ -63,6 +63,20 @@ public class Parte1 {
                         jugadorB = sc.nextInt();
                     } while (jugadorB < 0 || jugadorB > 5);
 
+                    suma = jugadorA + jugadorB;
+                    if (suma % 2 == 0) {//si suma is pares
+                        if (esPare == true) {//
+                            System.out.println("el jugador A que gana");
+                        }
+                    } else {
+                        //la suma impares
+                        if (esPare == false) {//
+                            System.out.println("el jugador A que gana");
+                        } else {
+                            System.out.println("el jugador B que gana");
+                        }
+
+                    }
                     break;
                 case 2:
                     System.out.println("Finalizar El Programa");
